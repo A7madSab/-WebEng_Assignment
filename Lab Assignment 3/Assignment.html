@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Web-Assignment</title>
+</head>
+
+<body>
+  view plainprint?
+  <br />
+  Number 1: <input type="number" id="n1" />
+  <br />
+  Number 2: <input type="number" id="n2" />
+  <br />
+  <input type="button" style="margin: px" value="ADD" onclick="addition()" />
+  <input type="button" style="margin: 5px" value="SUB" onclick="substraction()" />
+  <input type="button" style="margin: 5px" value="MUL" onclick="multiplication()" />
+  <input type="button" style="margin: 5px" value="DIV" onclick="division()" />
+  <input type="button" style="margin: 5px" value="MOD" onclick="modulus()" />
+  <br />
+  Get Result: <input type="text" id="result" readonly />
+  <br />
+
+  <script>
+    var n1 = document.getElementById("n1");
+    var n2 = document.getElementById("n2");
+    var result = document.getElementById("result");
+
+    function addition() {
+      if (n1.value != "" && n2.value != "") {
+        result.value = Number(n1.value) + Number(n2.value);
+      }
+    }
+
+    function substraction() {
+      if (n1.value != "" && n2.value != "") {
+        result.value = Number(n1.value) - Number(n2.value);
+      }
+    }
+
+    function multiplication() {
+      if (n1.value != "" && n2.value != "") {
+        result.value = Number(n1.value) * Number(n2.value);
+      }
+    }
+
+    function division() {
+      if (n1.value != "" && n2.value != "") {
+        if (Number(n2.value) == 0) {
+          result.value = "Math Error";
+        } else {
+          result.value = Number(n1.value) / Number(n2.value);
+        }
+      }
+    }
+
+    function modulus() {
+      if (n1.value != "" && n2.value != "") {
+        if (Number(n2.value) == 0) {
+          result.value = "Math Error";
+        } else {
+          result.value = Number(n1.value) % Number(n2.value);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
